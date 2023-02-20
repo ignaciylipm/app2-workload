@@ -16,10 +16,10 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: kapplegate
+  name: ktest
 spec:
   profile:
     displayName: Kris Test
-    email: kapplegate@vmware.com
+    email: ktest@vmware.com
     picture: https://example.com/staff/jenny-with-party-hat.jpeg
   memberOf: [team-b-develop]
