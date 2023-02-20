@@ -1,4 +1,4 @@
-package com.example.springboot;
+package com.example.apptoolkitdemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +21,11 @@ class HelloControllerTest {
 
     @Test
     void index() throws Exception {
-        assertEquals("Greetings from Spring Boot + Tanzu!", controller.index());
+        assertEquals("Greetings from Application Toolkit in Tanzu Community Edition!", controller.index());
 
         mockMvc
             .perform(get("/"))
             .andExpect(status().isOk())
-            .andExpect(content().string("Greetings from Spring Boot + Tanzu!"));
+            .andExpect(content().string("Greetings from Application Toolkit in Tanzu Community Edition!"));
     }
 }
