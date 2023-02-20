@@ -9,3 +9,5 @@ spec:
   targets:
     - ./systems/app2-system.yaml
     - ./components/app2-component.yaml
+    - ./groups/org.yaml
+    sfd gsd
