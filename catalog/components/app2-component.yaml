@@ -12,6 +12,6 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: ipm-team
-  system: app2-workload-system
+  owner: team-a
+  system: yelb
   dependsOn: [Component:yelb-db]
