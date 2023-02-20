@@ -1,70 +1,27 @@
-Java Demo Application
-=====================
+# app2-workload
 
-Java Demo Application for [Kubernetes](https://kubernetes.io/).
+This is a sample of a Java Spring app that works with Tilt and the Tanzu Application Platform.
 
-Overview
---------
+## Dependencies
+1. [kubectl CLI](https://kubernetes.io/docs/tasks/tools/)
+1. [Tilt version >= v0.23.2](https://docs.tilt.dev/install.html)
+1. Tanzu CLI and the apps plugin v0.2.0 which are provided as part of [Tanzu Application Platform](https://network.tanzu.vmware.com/products/tanzu-application-platform)
+1. A cluster with Tanzu Application Platform, and the "Default Supply Chain", plus its dependencies. This supply chains is part of [Tanzu Application Platform](https://network.tanzu.vmware.com/products/tanzu-application-platform).
 
-The demo runs on HTTP port 8080, and provides the current system environment variables formatted as an ASCII table:
+## Running the sample
 
-![Screen Shot](screenshot.png)
+Start the app deployment by running:
 
-This is useful for exploring the environment of a Kubernetes [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/). For example, the `HOSTNAME` variable tells which pod is serving the request.
-
-Run
----
-
-A pre-built Docker image is available on [fstab/java-demo](https://hub.docker.com/r/fstab/java-demo/). Test locally:
-
-```sh
-docker run -p8080:8080 --rm fstab/java-demo
+```
+tilt up
 ```
 
-Deploy on Kubernetes
+You can hit the spacebar to open the UI in a browser. 
 
-```yaml
-curl -LO https://raw.githubusercontent.com/fstab/java-demo/master/java-demo.yaml
-kubectl create -f java-demo.yaml
-```
-
-Build
------
-
-This demo requires Java 11.
-
-**Option 1:** Build the Docker image manually:
-
-```sh
-mvn package
-docker build -t fstab/java-demo .
-```
-
-**Option 2:** Build using the [Docker maven plugin](https://dmp.fabric8.io/):
-
-```sh
-mvn package docker:build
-```
-
-Test
-----
-
-Test locally:
-
-View [http://localhost:8080](http://localhost:8080).
-
-Test on Kubernetes:
-
-1.  Get the service's [Cluster IP](https://kubernetes.io/docs/concepts/services-networking/service/):
-    ```bash
-    export DEMO_SERVICE_IP=$(kubectl get service java-demo -o=jsonpath='{.spec.clusterIP}')
+- > If you see an "Update error" message like the one below, then just follow the instructions and allow that context:
     ```
-2.  Access the pods through the service's Cluster IP:
-    ```bash
-    curl $DEMO_SERVICE_IP
+    Stop! tap-beta2 might be production.
+    If you're sure you want to deploy there, add:
+        allow_k8s_contexts('tap-beta2')
+    to your Tiltfile. Otherwise, switch k8s contexts and restart Tilt.
     ```
-
-Notes
------
-
-You see a compile error in Intellij Idea? Me too, filed this bug report [https://youtrack.jetbrains.com/issue/IDEA-203791](https://youtrack.jetbrains.com/issue/IDEA-203791).
