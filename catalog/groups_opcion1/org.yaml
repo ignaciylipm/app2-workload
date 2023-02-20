@@ -1,8 +1,8 @@
-apiVersion: backstage.io/v1alpha1
+apiVersion: backstage.io/v1alpha1ipm
 kind: Group
 metadata:
-  name: demo-corp
-  description: The demo-corp organization
+  name: ipmtest
+  description: The ipm-corp organization
   links:
     - url: http://www.backstage.io/
       title: Website
@@ -11,19 +11,19 @@ metadata:
 spec:
   type: organization
   profile:
-    displayName: Demo Corp
-    email: demo@example.com
+    displayName: ipm Corp
+    email: ipm@example.com
     picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
   children: [it]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: example-group
+  name: ipm-group
   description: A Backstage example group
 spec:
   targets:
     - ./it-dept.yaml
     - ./dev-dept.yaml
     - ./team-a-group.yaml
-    - ./team-b-group.yaml
+  

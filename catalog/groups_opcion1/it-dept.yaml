@@ -6,5 +6,5 @@ metadata:
 spec:
   type: department
   # Intentional no profile for testing
-  parent: demo-corp
+  parent: ipm-corp
   children: [development]

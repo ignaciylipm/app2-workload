@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: team-a-ipm
+  name: team-a
   description: Team A
 spec:
   type: team
@@ -16,10 +16,10 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: nacho-user
+  name: guest
 spec:
   profile:
-    displayName: Nacho User
-    email: nacho@ipm.com
+    displayName: Guest User
+    email: guest1@example.com
     picture: https://avatars.dicebear.com/api/avataaars/guest@example.com.svg?background=%23fff
-  memberOf: [team-a-ipm]
+  memberOf: [team-a]
