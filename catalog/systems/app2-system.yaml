@@ -6,5 +6,5 @@ metadata:
   annotations:
     'backstage.io/techdocs-ref': dir:.
 spec:
-  owner: ipm-team
+  owner: team-a
   domain: cloud-apps
