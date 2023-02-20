@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1ipm
 kind: Group
 metadata:
-  name: ipmcorp
+  name: ipm-corp
   description: The ipm-corp organization
   links:
     - url: http://www.backstage.io/
@@ -19,7 +19,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: ipmgroup
+  name: ipm-group
   description: A Backstage example group
 spec:
   targets:
