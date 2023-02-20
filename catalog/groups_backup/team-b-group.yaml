@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: team-b-develop
-  description: Team B develop
+  name: team-b
+  description: Team B
 spec:
   type: team
   profile:
@@ -22,4 +22,4 @@ spec:
     displayName: Kris Test
     email: kapplegate@vmware.com
     picture: https://example.com/staff/jenny-with-party-hat.jpeg
-  memberOf: [team-b-develop]
+  memberOf: [team-b]
