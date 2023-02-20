@@ -13,5 +13,5 @@ spec:
   type: service
   lifecycle: experimental
   owner: ipm-team
-  system: App2-workload-system
+  system: app2-workload-system
   dependsOn: [Component:yelb-db]
