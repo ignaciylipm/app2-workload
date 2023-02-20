@@ -20,6 +20,6 @@ metadata:
 spec:
   profile:
     displayName: Guest User
-    email: nacho@ipm.com
+    email: guest1@example.com
     picture: https://avatars.dicebear.com/api/avataaars/guest@example.com.svg?background=%23fff
   memberOf: [team-a]
